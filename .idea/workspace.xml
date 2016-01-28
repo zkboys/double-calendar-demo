@@ -2,10 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbaee3b1-b57e-438f-83c9-e3dc108a81c7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/MITLicense.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.android-holo-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.animation.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.frame.android-holo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.frame.android.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.frame.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.frame.ios-classic.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.frame.ios.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.frame.jqm.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.frame.sense-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.frame.wp.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.image.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.mobiscroll-dark.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.scroller.android-holo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.scroller.android.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.scroller.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.scroller.ios-classic.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.scroller.ios.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.scroller.jqm.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.scroller.sense-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.scroller.wp.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/css/mobiscroll.wp-light.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/index (复件).html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/index-appframework.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/index-zepto.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/index1111.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.en-UK.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.pt-BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.pt-PT.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.ru-UA.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.zh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.android-holo-light.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.appframework.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.datetime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.datetimebase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.frame.android-holo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.frame.android.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.frame.ios-classic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.frame.ios.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.frame.jqm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.frame.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.frame.sense-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.frame.wp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.jqmwidget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.listbase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.mobiscroll-dark.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.scroller.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.select.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.treelist.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.util.datetime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.wp-light.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/js/mobiscroll.zepto.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/mobiscroll.datetime.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/mobiscroll.imageandtext.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/mobiscroll.select.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobiscroll/mobiscroll.treelist.jquery.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/calendar.css" afterPath="$PROJECT_DIR$/src/css/calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/calendar.js" afterPath="$PROJECT_DIR$/src/js/calendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/time_remind.html" afterPath="$PROJECT_DIR$/src/time_remind.html" />
     </list>
     <ignored path="double-calendar-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,14 +102,24 @@
     <favorites_list name="double-calendar-demo" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6351097">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="time_report.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/time_report.html">
+          <file leaf-file-name="time_remind.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/time_remind.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.3076923">
-                  <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+                <state vertical-scroll-proportion="-11.846154">
+                  <caret line="126" column="7" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index1111.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/mobiscroll/index1111.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.44658494">
+                  <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
                   <folding />
                 </state>
               </provider>
@@ -42,38 +128,8 @@
           <file leaf-file-name="calendar.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/js/calendar.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.1666667">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="372" column="33" selection-start-line="372" selection-start-column="33" selection-end-line="372" selection-end-column="33" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="time_remind.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/time_remind.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.31523642">
-                  <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mobile-calendar-master/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.0">
-                  <caret line="86" column="97" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="97" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="calendar.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/css/calendar.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.0869565">
-                  <caret line="346" column="35" selection-start-line="346" selection-start-column="35" selection-end-line="346" selection-end-column="35" />
                   <folding />
                 </state>
               </provider>
@@ -177,6 +233,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="double-calendar-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="double-calendar-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="double-calendar-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="double-calendar-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="double-calendar-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="double-calendar-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobiscroll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -196,6 +298,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mobiscroll" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/js" />
       <recent name="$PROJECT_DIR$/src/css" />
     </key>
@@ -413,9 +517,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-4" width="1865" height="1084" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2341946" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2341946" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -443,11 +547,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/产检 蓝/时间报.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -468,7 +567,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile-calendar-master/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0">
+        <state vertical-scroll-proportion="0.36435643">
           <caret line="86" column="97" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="97" />
           <folding />
         </state>
@@ -476,10 +575,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/calendar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0869565">
+        <state vertical-scroll-proportion="0.1980198">
           <caret line="346" column="35" selection-start-line="346" selection-start-column="35" selection-end-line="346" selection-end-column="35" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobiscroll/js/i18n/mobiscroll.i18n.cs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2562814">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="372" column="33" selection-start-line="372" selection-start-column="33" selection-end-line="372" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/产检 蓝/时间报.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/产检 蓝/时间提醒.png">
@@ -487,18 +607,34 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/calendar.js">
+    <entry file="file://$PROJECT_DIR$/src/time_remind.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1666667">
-          <caret line="372" column="33" selection-start-line="372" selection-start-column="33" selection-end-line="372" selection-end-column="33" />
+        <state vertical-scroll-proportion="-11.846154">
+          <caret line="126" column="7" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/time_remind.html">
+    <entry file="file://$PROJECT_DIR$/mobiscroll/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31523642">
-          <caret line="108" column="18" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobiscroll/index (复件).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobiscroll/index1111.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44658494">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
           <folding />
         </state>
       </provider>
