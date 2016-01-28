@@ -250,7 +250,7 @@
 }
 
 .calendar .calendar-list .today.shield {
-    background-color: #E4E4E4;
+    background-color: #CAFCD1;
     color: #333;
 }
 
@@ -260,6 +260,13 @@
 .calendar .calendar-list .today.next-m:active {
     color: #fff;
     background-color: #CAFCD1;
+}
+.calendar .calendar-list .selected.prev-m,
+.calendar .calendar-list .selected.next-m,
+.calendar .calendar-list .selected.prev-m:active,
+.calendar .calendar-list .selected.next-m:active {
+    color: #fff;
+    background-color: #bac2cf;
 }
 
 .calendar .calendar-list .prev-m:active,

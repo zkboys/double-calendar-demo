@@ -30,13 +30,14 @@
             width: 100%;
             height: 30%;
         }
-        .specific-time .title{
+
+        .specific-time .title {
             box-sizing: border-box;
-            width:100%;
-            height:25%;
-            padding-top:20px;
-            text-align:center;
-            color:#7B7B87;
+            width: 100%;
+            height: 25%;
+            padding-top: 20px;
+            text-align: center;
+            color: #7B7B87;
         }
 
         .time-box {
@@ -73,6 +74,10 @@
             top: 50%;
             margin-top: -12px;
         }
+
+        .btn:active {
+            background-color: #26a1a4;
+        }
     </style>
 </head>
 <body>
@@ -99,15 +104,19 @@
 <script src="js/jquery.js"></script>
 <script src="js/calendar.js"></script>
 <script>
+    var dd = new Date();
+    var ddd = new Date(2016, (3 - 1), 10);
     new Calendar({
-//        startDate: '2016/1/6',// 初始化显示的日期
-        selectedDate: '2016/1/23',
-        shield: "['2016/1/10', '2016/4/10', '2016/4/20']", //指定禁用日期
-        enableArea: "['2016/1/2']",//指定可用时间范围
-//        enableArea: "['2016/1/2','2016/1/29']",//指定可用时间范围
-//        past: true,//当前日期之前的日期是否可用 true 为不可用
-        showHeader: false,
         elem: document.getElementById('calendar1'),
+        startDate: '2016/1/30',// 初始化显示的日期 默认选中当前日期
+        startDateClass: 'selected', // 控制初始化日期样式
+        selectedDate: '2015/12/30',
+        selectedDateClass: 'today', // 控制选中日期样式
+        selectable: true,//是否可选
+//        shield: "['2016/1/10', '2016/4/10', '2016/4/20']", //指定禁用日期
+//        enableArea: [dd],//指定可用时间范围
+        enableArea: [dd, ddd],//指定可用时间范围
+        showHeader: false, //是否显示日历头
         onSelect: function (data) {
             var results = data.split('/')
             $('.time-box .year').html(results[0]);

@@ -21,6 +21,9 @@
         this.selectYearBox = null;// 年份选择
         this.selectMonthBox = null; // 月份选择
         this.selectedDate = options.selectedDate || '';
+        this.selectable = options.selectable == undefined ? true : options.selectable;
+        this.startDateClass = options.startDateClass == undefined ? 'today' : options.startDateClass;
+        this.selectedDateClass = options.selectedDateClass == undefined ? 'selected' : options.selectedDateClass;
         // 开始初始化
         var oDate = new Date();
         this.hours = false;
@@ -274,9 +277,7 @@
         // 创建上月尾部分
         var lastMonthDay = dWeek + 7;
         lastMonthDay = lastMonthDay >= 10 ? lastMonthDay - 7 : lastMonthDay;
-
         for (var i = 0; i < lastMonthDay; i++) {
-
             var oSpan = create('span'),
                 oNum = create('a', {
                     "data-calen": (tYear + '/' + (tMonth - 1) + '/' + lastMonths[i]),
@@ -285,16 +286,10 @@
                 }, lastMonths[i]);
 
             if (lastMonths[i] == tDay && data.m == 1 && !data.y && !data.d || !data.y && Number($this.fixDate.m) + 1 == tMonth && $this.fixDate.d == lastMonths[i]) {
-                toolClass(oNum, 'today');
+                toolClass(oNum, $this.startDateClass);
             }
-
             // 设置禁用日期
             if (setShiled(tYear, tMonth - 1, lastMonths[i]))toolClass(oNum, 'pasted shield');
-
-            // 设置已选中日期
-            if ($this.selectedDate == (tYear + '/' + tMonth + '/' + lastMonths[i])) {
-                toolClass(oNum, 'selected');
-            }
 
 
             oSpan.appendChild(oNum);
@@ -330,7 +325,7 @@
             if (!data.m && !data.y || !data.y && $this.fixDate.m == tMonth) {
                 if (($this.fixDate.d == n && $this.fixDate.m == tMonth) || (!$this.fixDate.d && n == tDay)) {
 
-                    oNum.className = oNum.className + ' today';
+                    oNum.className = oNum.className + ' ' + $this.startDateClass;
                 }
                 else if (($this.past || $this.hoursPast) && n < tDay) {
                     oNum.className = oNum.className + ' expire pasted';
@@ -342,16 +337,10 @@
 
             // 设置是否小于用户定义的开始日期
             if (tYear <= $this.fixDate.y && tMonth <= $this.fixDate.m && n < data.d || tYear <= $this.fixDate.y && tMonth < $this.fixDate.m) {
-                if ($this.startDate)toolClass(oNum, 'expire pasted');
+                //if ($this.startDate)toolClass(oNum, 'expire pasted');
             }
-
             // 设置禁用日期
             if (setShiled(tYear, tMonth, n))toolClass(oNum, 'pasted shield');
-            // 设置已选中日期
-            if ($this.selectedDate == (tYear + '/' + tMonth + '/' + n)) {
-                toolClass(oNum, 'selected');
-            }
-
             oSpan.appendChild(oNum);
             oList.appendChild(oSpan);
         }
@@ -369,15 +358,10 @@
                 }, n);
 
             if (n == tDay && data.m == -1 && !data.y && !data.d || !data.y && $this.fixDate.m - 1 == tMonth && $this.fixDate.d == n) {
-                toolClass(oNum, 'today');
+                toolClass(oNum, $this.startDateClass);
             }
-
             // 设置禁用日期
             if (setShiled(tYear, tMonth + 1, n))toolClass(oNum, 'pasted shield');
-            // 设置已选中日期
-            if ($this.selectedDate == (tYear + '/' + tMonth + '/' + n)) {
-                toolClass(oNum, 'selected');
-            }
             oSpan.appendChild(oNum);
             oList.appendChild(oSpan);
         }
@@ -385,13 +369,21 @@
         // 设置禁用日期
         function setShiled(iyear, imonth, idate) {
             if ($this.enableArea) {
-                var area = getDate($this.enableArea);
-                var areaStart = area[0];
+                var area = $this.enableArea;
+                var areaStart = {
+                    y: area[0].getFullYear(),
+                    m: area[0].getMonth() + 1,
+                    d: area[0].getDate()
+                };
                 if (iyear < areaStart.y) return true;
                 if (iyear == areaStart.y && imonth < areaStart.m) return true;
                 if (iyear == areaStart.y && imonth == areaStart.m && idate < areaStart.d) return true;
                 if (area.length == 2) {
-                    var areaEnd = area[1];
+                    var areaEnd = {
+                        y: area[1].getFullYear(),
+                        m: area[1].getMonth() + 1,
+                        d: area[1].getDate()
+                    };
                     if (iyear > areaEnd.y) return true;
                     if (iyear == areaEnd.y && imonth > areaEnd.m) return true;
                     if (iyear == areaEnd.y && imonth == areaEnd.m && idate > areaEnd.d) return true;
@@ -409,8 +401,19 @@
             return false;
         }
 
+        var dd = new Date();
+        var nowDate = dd.getFullYear() + '/' + (dd.getMonth() + 1) + '/' + dd.getDate();
+        $(oList).find('span a').each(function (k, v) {
+            if ($(v).attr('data-calen') == $this.selectedDate) {
+                $(v).addClass($this.selectedDateClass);
+            }
+            if ($(v).attr('data-calen') == nowDate) {
+                $(v).html('今天');
+            }
+
+        });
         return oList;
-    }
+    };
 
     /**
      * 创建年月
@@ -695,8 +698,8 @@
             aCalenSet[i].onclick = function () {
                 var date = attr(this, 'data-calen'), today = this.innerHTML;
                 date = format(date, (attr($this.focusObj, 'format') || false));
-                if (!$(this).hasClass('pasted')) {
-                    $(this).addClass('selected').parent().siblings('span').find('a').removeClass('selected');
+                if (!$(this).hasClass('pasted') && $this.selectable) {
+                    $(this).addClass($this.selectedDateClass).parent().siblings('span').find('a').removeClass($this.selectedDateClass);
                     $this.selectedDate = date;
                     $this.onSelect.call(this, date);
                 }
