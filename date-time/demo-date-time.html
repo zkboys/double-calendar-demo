@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>Mobiscroll</title>
+
+    <!-- jQuery Include -->
+    <script src="js/jquery.js"></script>
+    <!-- Mobiscroll JS and CSS Includes -->
+    <script src="js/date-time.js"></script>
+    <link href="css/date-time.css" rel="stylesheet" type="text/css"/>
+    <style type="text/css">
+        /* Demo Page styling, you can disregard this in your implementation */
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-family: arial, verdana, sans-serif;
+        }
+
+        input, select {
+            width: 100%;
+            padding: .625em;
+            margin: 0 0 .625em 0;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        .header {
+            padding: .625em;
+            background: #5185a8;
+        }
+
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            font-size: 1.25em;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #000;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .content {
+            padding: 1em;
+        }
+
+        #demo_datetime_div {
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid red;
+        }
+    </style>
+
+    <script>
+        $(function () {
+
+            //使用div时要作一些特殊的处理
+            $('#demo_datetime_div').mobiscroll().datetime({
+                buttons: ['set', 'cancel', 'clear', 'now'],
+                dateFormat: 'yy-mm-dd',
+                theme: '',     // Specify theme like: theme: 'ios' or omit setting to use default
+                mode: 'scroller',       // Specify scroller mode like: mode: 'mixed' or omit setting to use default
+                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+                lang: 'zh',       // Specify language like: lang: 'pl' or omit setting to use default
+                defaultValue: (function () {
+                    var defaultValueStr = $('#demo_datetime').html();
+                    var defaultValue = new Date();
+                    if (defaultValueStr) {
+                        var day = defaultValueStr.split(' ')[0].split('-');
+                        var time = defaultValueStr.split(' ')[1].split(':');
+                        var y = parseInt(day[0]);
+                        var m = parseInt(day[1]) - 1;
+                        var d = parseInt(day[2]);
+                        var h = parseInt(time[0]);
+                        var mm = parseInt(time[1]);
+                        defaultValue = new Date(y, m, d, h, mm);
+                    }
+                    return defaultValue;
+
+                })(),
+                minDate: new Date(2012, 3, 10, 9, 22),  // More info about minDate: http://docs.mobiscroll.com/2-14-0/datetime#!opt-minDate
+                maxDate: new Date(2018, 7, 30, 15, 44),   // More info about maxDate: http://docs.mobiscroll.com/2-14-0/datetime#!opt-maxDate
+                stepMinute: 1,  // More info about stepMinute: http://docs.mobiscroll.com/2-14-0/datetime#!opt-stepMinute
+                onSelect: function (value) {
+                    $(this).html(value);
+                },
+                onCancel: function () {
+
+                },
+                onClear: function () {
+                    $(this).html("");
+                }
+            });
+            $('#demo_datetime').mobiscroll().datetime({
+                buttons: ['set', 'cancel', 'clear', 'now'],
+                dateFormat: 'yy-mm-dd',
+                theme: '',     // Specify theme like: theme: 'ios' or omit setting to use default
+                mode: 'scroller',       // Specify scroller mode like: mode: 'mixed' or omit setting to use default
+                display: 'bottom', // Specify display mode like: display: 'bottom' or omit setting to use default
+                lang: 'zh',       // Specify language like: lang: 'pl' or omit setting to use default
+                defaultValue: new Date(),
+                minDate: new Date(2012, 3, 10, 9, 22),  // More info about minDate: http://docs.mobiscroll.com/2-14-0/datetime#!opt-minDate
+                maxDate: new Date(2018, 7, 30, 15, 44),   // More info about maxDate: http://docs.mobiscroll.com/2-14-0/datetime#!opt-maxDate
+                stepMinute: 1  // More info about stepMinute: http://docs.mobiscroll.com/2-14-0/datetime#!opt-stepMinute
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="header">
+    <h1>Mobiscroll</h1>
+</div>
+
+<div class="content">
+    <!-- Demo configurator markup START, disregard this in your implementation -->
+
+    <!-- Demo configurator markup END -->
+
+
+    <!-- Date & Time demo markup -->
+    <div data-role="fieldcontain" class="demo-cont" id="demo_cont_datetime">
+        <label for="demo_datetime">Try Date & Time</label>
+
+        <div id="demo_datetime_div">2015-10-20 08:44</div>
+        <input type="text" id="demo_datetime"/>
+    </div>
+
+
+</div>
+</body>
+</html>

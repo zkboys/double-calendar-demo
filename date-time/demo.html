@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Mobiscroll</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/date-time.js"></script>
+    <link href="css/date-time.css" rel="stylesheet" type="text/css"/>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+        }
+        .dw.dw-ltr{
+            width:100%;
+        }
+        .mbsc-w-p.dwc.dwsc.dwhl{
+            width:100%;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#time-wrap').mobiscroll().time({
+                theme: '',     // Specify theme like: theme: 'ios' or omit setting to use default
+                mode: 'scroller',       // Specify scroller mode like: mode: 'mixed' or omit setting to use default
+                display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+                lang: 'zh',        // Specify language like: lang: 'pl' or omit setting to use default
+                onChange: function (value) {
+                    $('#time-value').html(value);
+                },
+                onCancel: function () {
+
+                },
+                onClear: function () {
+                    $(this).html("");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="header">
+    <h1>Mobiscroll</h1>
+</div>
+
+<div class="content">
+    <div id='time-value' style="height:30px;background-color:green;"></div>
+    <div id="time-wrap"></div>
+</div>
+</body>
+</html>

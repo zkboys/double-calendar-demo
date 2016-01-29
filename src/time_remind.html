@@ -8,6 +8,7 @@
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;" name="viewport"/>
     <title>时间提醒</title>
     <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/date-time.css"/>
     <style>
         body {
             margin: 0;
@@ -27,39 +28,86 @@
         }
 
         .specific-time {
-            width: 100%;
-            height: 30%;
+            position: relative;
         }
 
         .specific-time .title {
-            box-sizing: border-box;
             width: 100%;
-            height: 25%;
-            padding-top: 20px;
+            height: 50px;
+            line-height: 50px;
+            box-sizing: border-box;
             text-align: center;
             color: #7B7B87;
+        }
+
+        .specific-time #time-wrap {
+            width: 100%;
+            height: 122px;
+            border-top: 1px solid #E4DEDE;
+            border-bottom: 1px solid #E4DEDE;
+        }
+
+        .specific-time #time-ho, .specific-time #time-mi {
+            position: absolute;
+            top: 98px;
+            left: 25%;
+            margin-left: 15px;
+            z-index: 999;
+            font-size: 15px;
+            color: #F9677C;
+        }
+
+        .specific-time #time-mi {
+            left: 75%;
+        }
+
+        .dw.dw-ltr {
+            width: 100%;
+        }
+
+        .mbsc-w-p.dwc.dwsc.dwhl {
+            width: 100%;
+            padding: 0;
+        }
+
+        .mbsc-mobiscroll .dwwr {
+            background: #fff;
+        }
+
+        .mbsc-mobiscroll .dwfl {
+            padding: 0;
+            border-right: 1px solid #E4DEDE;
+        }
+
+        .mbsc-mobiscroll .dwwol {
+            border-top: 1px solid #E4DEDE;
+            border-bottom: 1px solid #E4DEDE;
+            border-left: 3px solid #3BD068;
+        }
+
+        .dwwc {
+            max-width: 100% !important;
+            width: 100%;
+        }
+
+        .dw-sel {
+            color: #F9677C;
         }
 
         .time-box {
             box-sizing: border-box;
             position: relative;
             width: 100%;
-            height: 10%;
-            border-top: 1px solid #E4DEDE;
+            height: 50px;
+            line-height: 50px;
             color: #A0A0A0;
             text-align: center;
         }
 
-        .time-box > div {
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            margin-top: -9px;
-        }
-
         .btn {
             width: 100%;
-            height: 10%;
+            height: 50px;
+            line-height: 50px;
             background: #55B8E8;
             text-align: center;
             color: #fff;
@@ -68,16 +116,11 @@
             position: relative;
         }
 
-        .btn > div {
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            margin-top: -12px;
-        }
-
         .btn:active {
             background-color: #26a1a4;
         }
+
+
     </style>
 </head>
 <body>
@@ -85,27 +128,41 @@
     <div class="remind-calendar">
         <div id="calendar1" class="calendar"></div>
     </div>
-    <div class="specific-time">
-        <div class="title">具体提醒时间</div>
-    </div>
-    <div class="time-box">
-        <div>
+    <div id="static-height">
+        <div class="specific-time">
+            <div class="title">具体提醒时间</div>
+            <div id="time-wrap"></div>
+            <div id="time-ho">时</div>
+            <div id="time-mi">分</div>
+        </div>
+        <div class="time-box">
             <span class="year">2016</span>年
             <span class="month">1</span>月
-            <span class="day">17</span>日
-            <span class="hour">08</span>:
-            <span class="minute">28</span>
+            <span class="day">30</span>日
+            <span class="time">11:11</span>
         </div>
-    </div>
-    <div class="btn">
-        <div>确定</div>
+        <div class="btn">
+            确定
+        </div>
     </div>
 </div>
 <script src="js/jquery.js"></script>
 <script src="js/calendar.js"></script>
+<script src="js/date-time.js"></script>
 <script>
-    var dd = new Date();
-    var ddd = new Date(2016, (3 - 1), 10);
+    function setCalendarHeight() {
+        var staticHeight = 274;
+        var winH = $(window).height();
+        var calendarH = winH - staticHeight;
+        $('.remind-calendar').height(calendarH - 1);
+    }
+    setCalendarHeight();
+    $(window).resize(function () {
+        setCalendarHeight()
+    });
+
+    var enableStart = new Date();
+    var enableEnd = new Date(2016, (3 - 1), 10);
     new Calendar({
         elem: document.getElementById('calendar1'),
         startDate: '2016/1/30',// 初始化显示的日期 默认选中当前日期
@@ -114,9 +171,9 @@
         selectedDateClass: 'today', // 控制选中日期样式
         selectable: true,//是否可选
 //        shield: "['2016/1/10', '2016/4/10', '2016/4/20']", //指定禁用日期
-//        enableArea: [dd],//指定可用时间范围
-        enableArea: [dd, ddd],//指定可用时间范围
-        showHeader: false, //是否显示日历头
+        enableArea: [enableStart],//指定可用时间范围
+//        enableArea: [enableStart, enableEnd],//指定可用时间范围
+        showHeader: false, //是否显示日历头 目前头部显示有bug
         onSelect: function (data) {
             var results = data.split('/')
             $('.time-box .year').html(results[0]);
@@ -125,13 +182,25 @@
             console.log(data);
         }
     });
-    /*new Calendar({
-     showHeader: true,
-     elem: document.getElementById('calendar2'),
-     onSelect: function (data) {
-     console.log(data);
-     }
-     });*/
+    $('#time-wrap').mobiscroll().time({
+        rows: 3,
+        defaultValue:  new Date(),//默认显示时间，初始化时显示的时间。
+        theme: '',     // Specify theme like: theme: 'ios' or omit setting to use default
+        mode: 'scroller',       // Specify scroller mode like: mode: 'mixed' or omit setting to use default
+        display: 'inline', // Specify display mode like: display: 'bottom' or omit setting to use default
+        lang: 'zh',        // Specify language like: lang: 'pl' or omit setting to use default
+        onChange: function (value) {
+            $('.time-box .time').html(value);
+        }
+    });
+    $('.btn').click(function () {
+        var year = $('.time-box .year').html();
+        var month = $('.time-box .month').html();
+        var day = $('.time-box .day').html();
+        var time = $('.time-box .time').html();
+        var result = year + '-' + month + '-' + day + ' ' + time;
+        alert('选中的日期为：' + result);
+    });
 
 </script>
 </body>
