@@ -12,6 +12,14 @@
             color: #7B7B87;
         }
 
+        .time-table-wrap {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+        }
+
         #customer-time, #system-time {
             width: 100%;
             height: 280px;
@@ -22,7 +30,7 @@
             height: 30px;
             line-height: 30px;
             text-align: center;
-            font-size:12px;
+            font-size: 12px;
 
         }
 
@@ -43,73 +51,73 @@
 
 </head>
 <body>
-<div class="time-table-wrap">
-    <div id="customer-time" class="calendar"></div>
-    <!--<div class="time-label"> 2016年02月 </div>-->
-    <div id="system-time" class="calendar"></div>
-    <div class="time-tips">
-        <span class="system-tip-icon"></span>
-        <span class="system-tip-content">系统设定时间</span>
-        <span class="customer-tip-icon"></span>
-        <span class="customer-tip-content">自行设定时间</span>
-    </div>
-</div>
+<div id='test-btn' style="width:100px;height:50px;line-height:50px;text-align:center;color:#fff;background:green;">点击我</div>
 <script src="js/jquery.js"></script>
 <script src="js/calendar.js"></script>
 <script>
-    //自适应高度
-    function setCalendarHeight() {
-        var staticHeight = 30;
-        var winH = $(window).height();
-        var calendarH = (winH - staticHeight) / 2;
-        $('#customer-time,#system-time ').height(calendarH - 1);
-    }
-    setCalendarHeight();
-    $(window).resize(function () {
-        setCalendarHeight()
+    var htmlTemplate = '<div class="time-table-wrap">'
+            + '<div id="customer-time" class="calendar"></div>'
+            + '<!--<div class="time-label"> 2016年02月 </div>-->'
+            + '<div id="system-time" class="calendar"></div>'
+            + '<div class="time-tips">'
+            + '<span id="close" style="color:red;">关闭</span>'
+            + '<span class="system-tip-icon"></span>'
+            + '<span class="system-tip-content">系统设定时间</span>'
+            + '<span class="customer-tip-icon"></span>'
+            + '<span class="customer-tip-content">自行设定时间</span>'
+            + '</div>'
+            + '</div>';
+    $(document).on('click', '#close', function () {
+        $('.time-table-wrap').remove();
     });
-
-    var enableStart = new Date();
-    var enableEnd = new Date(2016, (3 - 1), 10);
-    new Calendar({
-        elem: document.getElementById('customer-time'),
-        startDate: '2016/1/31',// 初始化显示的日期 默认选中当前日期
-        startDateClass: 'today', // 控制初始化日期样式
-        selectedDate: '2015/12/30',
-        selectedDateClass: 'today', // 控制选中日期样式
-        selectable: false,//是否可选
-//        shield: "['2016/1/10', '2016/4/10', '2016/4/20']", //指定禁用日期
-        enableArea: [enableStart],//指定可用时间范围
-//        enableArea: [enableStart, enableEnd],//指定可用时间范围
-        showHeader: true, //是否显示日历头 目前头部显示有bug
-        onSelect: function (data) {
-            var results = data.split('/')
-            $('.time-box .year').html(results[0]);
-            $('.time-box .month').html(results[1]);
-            $('.time-box .day').html(results[2]);
-            console.log(data);
+    $('#test-btn').click(function () {
+        $('body').append(htmlTemplate);
+        //自适应高度
+        function setCalendarHeight() {
+            var staticHeight = 30;
+            var winH = $(window).height();
+            var calendarH = (winH - staticHeight) / 2;
+            $('#customer-time,#system-time ').height(calendarH - 1);
         }
-    });
-    new Calendar({
-        elem: document.getElementById('system-time'),
-        startDate: '2016/2/2',// 初始化显示的日期 默认选中当前日期
-        startDateClass: 'selected-blue', // 控制初始化日期样式
-        selectedDate: '2015/12/30',
-        selectedDateClass: 'today', // 控制选中日期样式
-        selectable: false,//是否可选
-//        shield: "['2016/1/10', '2016/4/10', '2016/4/20']", //指定禁用日期
-        enableArea: [enableStart],//指定可用时间范围
-//        enableArea: [enableStart, enableEnd],//指定可用时间范围
-        showHeader: true, //是否显示日历头 目前头部显示有bug
-        onSelect: function (data) {
-            var results = data.split('/')
-            $('.time-box .year').html(results[0]);
-            $('.time-box .month').html(results[1]);
-            $('.time-box .day').html(results[2]);
-            console.log(data);
-        }
-    });
 
+        setCalendarHeight();
+        $(window).resize(function () {
+            setCalendarHeight()
+        });
+
+        var enableStart = new Date();
+        var enableEnd = new Date(2016, (3 - 1), 10);
+        new Calendar({
+            elem: document.getElementById('customer-time'),
+            startDate: '2016/1/31',// 初始化显示的日期 默认选中当前日期
+            startDateClass: 'today', // 控制初始化日期样式
+            selectedDate: '2015/12/30',
+            selectedDateClass: 'today', // 控制选中日期样式
+            selectable: true,//是否可选
+//        shield: "['2016/1/10', '2016/4/10', '2016/4/20']", //指定禁用日期
+            enableArea: [enableStart],//指定可用时间范围
+//        enableArea: [enableStart, enableEnd],//指定可用时间范围
+            showHeader: true, //是否显示日历头 目前头部显示有bug
+            onSelect: function (data) {
+                console.log(data);
+            }
+        });
+        new Calendar({
+            elem: document.getElementById('system-time'),
+            startDate: '2016/2/2',// 初始化显示的日期 默认选中当前日期
+            startDateClass: 'selected-blue', // 控制初始化日期样式
+            selectedDate: '2015/12/30',
+            selectedDateClass: 'selected-blue', // 控制选中日期样式
+            selectable: true,//是否可选
+//        shield: "['2016/1/10', '2016/4/10', '2016/4/20']", //指定禁用日期
+            enableArea: [enableStart],//指定可用时间范围
+//        enableArea: [enableStart, enableEnd],//指定可用时间范围
+            showHeader: true, //是否显示日历头 目前头部显示有bug
+            onSelect: function (data) {
+                console.log(data);
+            }
+        });
+    });
 </script>
 </body>
 </html>
