@@ -186,8 +186,7 @@
 
                         years[k].onclick = function () {
                             for (var x = 0; x < years.length; x++)toolClass(years[x], 'active', 'remove');
-
-                            $this.yNow += attr(ele, 'data-value') - attr($this.yearTitle, 'data-value');
+                            $this.yNow += attr(this, 'data-value') - attr($this.yearTitle, 'data-value');
                             $this.selectDate(ele, $this.selectYearBox, "y", $this.yNow);
                         }
                     }
@@ -813,7 +812,6 @@
     /**/
     Calendar.prototype.selectDate = function (obj, obj2, attr, val) {
         var $this = this;
-
         this.startJSON.prev[attr] = (attr == 'm' ? val - 1 : val);
         this.startJSON.now[attr] = val;
         this.startJSON.next[attr] = (attr == 'm' ? val + 1 : val);
